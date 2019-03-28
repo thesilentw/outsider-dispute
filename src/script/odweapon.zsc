@@ -50,6 +50,32 @@ Class ODWeapon : DoomWeapon abstract {
     }
     int PreviousTicsButtons[16];
 	
+	action bool	A_MeleeWithResult(int damage = 0, bool canZerk = true) {
+		FTranslatedLineTarget t;
+		
+		int attackDamage = damage; //(random(1,2)*15);		
+		
+		if (FindInventory("PowerStrength") && canZerk) {
+			attackDamage = damage*10; //(random(1,3)*80);
+		}
+		
+		double ang = angle + Random2[Punch]() * (5.625 / 256);
+		double pitch = AimLineAttack (ang, DEFMELEERANGE, null, 0., ALF_CHECK3D);
+
+		LineAttack (ang, DEFMELEERANGE, pitch, attackDamage, 'Melee', "BulletPuff", LAF_ISMELEEATTACK, t);
+
+		// turn to face target
+		if (t.linetarget)
+		{
+			A_PlaySound ("*fist", CHAN_WEAPON);
+			angle = t.angleFromSource;
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
 	states {
 		Spawn:
 			TNT1 A -1;
