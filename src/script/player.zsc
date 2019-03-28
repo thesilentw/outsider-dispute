@@ -1,0 +1,9 @@
+Class ODPlayer : DoomPlayer {	
+	default {
+		Player.StartItem "Pistol";
+		Player.StartItem "Fist";
+		Player.StartItem "Clip", 40;
+		Player.DisplayName "Outsider Disputant";
+	}
+}
+//eof

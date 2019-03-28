@@ -1,0 +1,5 @@
+version "3.4"
+#include "script/odweapon.zsc"
+#include "script/player.zsc"
+//#include "script/filename.zsc"
+//eof
