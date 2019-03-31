@@ -1,7 +1,8 @@
-/// EQCWeapon.zsc
-/// Prototype weapon
+/// ODWeapon.zsc
+/// outsider-dispute prototype weapon
 ///
 Class ODWeapon : DoomWeapon abstract {
+//for some reason abstract doesn't work, which irritates me
 	default {
 		inventory.pickupMessage "OBTAINED DEFAULT WEAPON - THIS IS A BUG - PLEASE REPORT THIS!";
 		weapon.slotNumber 1;
@@ -96,9 +97,6 @@ Class ODWeapon : DoomWeapon abstract {
 			}
 			SHTG A 1 A_WeaponReady();
 			Goto Ready;
-		Spawn:
-			TLGL A -1;
-			Stop;
 	}
 }
 

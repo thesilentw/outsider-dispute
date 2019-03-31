@@ -4,5 +4,10 @@ misc/silent DSEMPTY
 misc/oof 	DSOOF
 misc/dry 	NOAMMO
 //
+$random weapons/blastershot {weapons/laser1 weapons/laser2 weapons/laser3 weapons/laser4}
+weapons/laser1 LASER1
+weapons/laser2 LASER2
+weapons/laser3 LASER3
+weapons/laser4 LASER4
 //
 // eof
