@@ -1,5 +1,9 @@
 // SNDINFO
 //
+$alias weapons/laserhit weapons/plasmax
+$volume weapons/laserhit 0.2
+//
+//
 misc/silent DSEMPTY
 misc/oof 	DSOOF
 misc/dry 	NOAMMO
@@ -10,6 +14,11 @@ weapons/laser1 LASER1
 weapons/laser2 LASER2
 weapons/laser3 LASER3
 weapons/laser4 LASER4
-
 //
+$random weapons/spazerprimary {weapons/spazerp1 weapons/spazerp2 weapons/spazerp3}
+$volume weapons/spazerprimary 0.2
+weapons/spazerp1 db-1
+weapons/spazerp2 db-2
+weapons/spazerp3 db-2
+weapons/spazersecondary "sounds/spazer/ded_shot_explode.wav"
 // eof

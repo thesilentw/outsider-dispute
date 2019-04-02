@@ -1,8 +1,9 @@
 Class ODPlayer : DoomPlayer {	
 	default {
 		Player.StartItem "ODBlaster";
-		//Player.StartItem "Fist";
-		//Player.StartItem "Clip", 40;
+		Player.StartItem "BCharge", 19;
+		Player.StartItem "ODSpazershot";
+		Player.StartItem "Shell", 40;
 		Player.DisplayName "Outsider Disputant";
 	}
 }
