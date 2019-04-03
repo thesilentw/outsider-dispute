@@ -18,6 +18,7 @@ Class ODBlaster : ODWeapon replaces Pistol {
 		Weapon.BobRangeY 0.7;
 		+WEAPON.NODEATHINPUT;
 		Weapon.yadjust 6;
+		+Weapon.Ammo_Optional;
 	}	
 	
 	states {
