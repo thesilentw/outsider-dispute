@@ -8,6 +8,8 @@ misc/silent DSEMPTY
 misc/oof 	DSOOF
 misc/dry 	NOAMMO
 //
+// Blaster
+//
 $random weapons/blastershot {weapons/laser1 weapons/laser2 weapons/laser3 weapons/laser4}
 $volume weapons/blastershot 0.4
 weapons/laser1 LASER1
@@ -15,10 +17,29 @@ weapons/laser2 LASER2
 weapons/laser3 LASER3
 weapons/laser4 LASER4
 //
+// Spazershot
+//
 $random weapons/spazerprimary {weapons/spazerp1 weapons/spazerp2 weapons/spazerp3}
-$volume weapons/spazerprimary 0.2
+$volume weapons/spazerprimary 0.3
 weapons/spazerp1 db-1
 weapons/spazerp2 db-2
 weapons/spazerp3 db-2
-weapons/spazersecondary "sounds/spazer/ded_shot_explode.wav"
+$random weapons/spazersecondary {weapons/spazers1 weapons/spazers2 weapons/spazers3 weapons/spazers4}
+//$limit weapons/spazersecondary 0
+$volume weapons/spazersecondary 0.3
+weapons/spazers1 "sounds/spazer/genericshotgun-1.wav"
+weapons/spazers2 "sounds/spazer/genericshotgun-2.wav"
+weapons/spazers3 "sounds/spazer/genericshotgun-3.wav"
+weapons/spazers4 "sounds/spazer/mediumshotgun.wav"
+weapons/spazerleverfull "sounds/spazer/marlinlever.wav"
+$volume weapons/spazerleverfull 0.6
+weapons/spazerpumpbk "sounds/spazer/nagant-open.wav"
+weapons/spazerpumpfwd "sounds/spazer/db-open.wav"
+//weapons/spazersecondary "sounds/spazer/ded_shot_explode.wav"
+//weapons/spazerleveropn "sounds/spazer/nagant-up.wav"
+//weapons/spazerleversht "sounds/spazer/nagant-open.wav"
+//
+//
+//
+
 // eof

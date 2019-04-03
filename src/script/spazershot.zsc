@@ -39,27 +39,75 @@ Class ODSpazershot : ODWeapon replaces Shotgun {
 				}
 				return ResolveState(Null);
 			}
-			SPAF A 1 Bright {
-				invoker.randOffset = Random(-1, 1);
-				A_FireProjectile("SpazerBolt");
-				A_PlaySound("weapons/spazerprimary");
+			SPAZ A 2 A_PlaySound("weapons/spazerprimary", CHAN_WEAPON);
+			SPAF A 3 Bright {
+				invoker.randOffset = Random(-4, 4);
+				for (int i = 0; i <= 7; i++) {
+					A_FireProjectile("SpazerBolt", angle: frandom(-1.0, 1.0), useammo: false, flags: 0, pitch: frandom(-0.7, 0.7));
+				}
 				A_WeaponOffset(invoker.randOffset, 10, WOF_ADD);
+				A_TakeInventory("Shell", 1);
 				return ResolveState(Null);
 			}
-			SPAZ A 10 A_WeaponOffset((invoker.randOffset*-1), -10, WOF_ADD);
-			SPAZ C 3 A_WeaponOffset(-10, 3, WOF_ADD);
-			SPAZ C 5 A_WeaponOffset(-15, 5, WOF_ADD);
-			SPAZ E 1 A_WeaponOffset(2, 3, WOF_ADD);
-			SPAZ E 4;
-			SPAZ C 14 A_WeaponOffset(23, -11, WOF_ADD);
-			SPAZ A 5 A_Refire();
+			SPAZ A 5 A_WeaponOffset((invoker.randOffset*-1), -10, WOF_ADD);
+			SPAZ A 5 A_WeaponOffset(-20, 0, WOF_ADD);
+			SPAZ C 3 {
+				A_WeaponOffset(-40, 10, WOF_ADD);
+				A_PlaySound("weapons/spazerleverfull", CHAN_AUTO);
+			}
+			SPAZ E 7 A_WeaponOffset(-6, 3, WOF_ADD);
+			SPAZ C 7 A_WeaponOffset(6, -3, WOF_ADD);
+			SPAZ A 7 A_WeaponOffset(60, -10, WOF_ADD);
+			TNT1 A 0 A_Refire();
 			Goto Ready;
 		NoAmmo:
 			SPAZ A 2 {
 				A_PlaySound("misc/dry");
-				A_WeaponOffset(-2, -3, WOF_ADD);
+				A_WeaponOffset(2, 3, WOF_ADD);
 			}
 			SPAZ A 4 A_WeaponOffset(-2, -3, WOF_ADD);
+			Goto Ready;
+		AltFire:
+			TNT1 A 0 {
+				if (CountInv("Shell") < 1) {
+					return ResolveState("NoAmmo");
+				}
+				return ResolveState(Null);
+			}
+			SPAZ C 7;
+			SPAZ D 5 A_PlaySound("weapons/spazerpumpfwd", CHAN_AUTO);
+			SPAZ C 15 A_PlaySound("weapons/spazerpumpbk", CHAN_AUTO);
+			SPAZ A 2 A_PlaySound("weapons/spazersecondary", CHAN_WEAPON);
+			SPAF A 3 Bright {
+				invoker.randOffset = Random(-7, 7);
+				for (int i = 0; i <= 7; i++) {
+					A_FireProjectile("SpazerBolt", angle: frandom(-4.0, 4.0), useammo: false, flags: 0, pitch: frandom(-3.0, 3.0));
+				}
+				A_WeaponOffset(invoker.randOffset, 12, WOF_ADD);
+				A_TakeInventory("Shell", 1);
+				return ResolveState(Null);
+			}
+			SPAZ A 1 A_Refire("AutoFire");
+			Goto Ready;
+		Autofire:
+			TNT1 A 0 {
+				if (CountInv("Shell") < 1) {
+					return ResolveState("NoAmmo");
+				}
+				return ResolveState(Null);
+			}
+			SPAZ A 1 A_PlaySound("weapons/spazersecondary", CHAN_WEAPON);
+			SPAZ A 1 A_WeaponOffset(invoker.randOffset*-1, -12, WOF_ADD);
+			SPAF A 4 Bright {
+				invoker.randOffset = Random(-7, 7);
+				for (int i = 0; i <= 7; i++) {
+					A_FireProjectile("SpazerBolt", angle: frandom(-3.0, 3.0), useammo: false, flags: 0, pitch: frandom(-3.0, 3.0));
+				}
+				A_WeaponOffset(invoker.randOffset, 12, WOF_ADD);
+				A_TakeInventory("Shell", 1);
+				return ResolveState(Null);
+			}
+			SPAZ A 4 A_Refire("AutoFire");
 			Goto Ready;
 	}
 }
@@ -72,7 +120,7 @@ Class SpazerBolt : FastProjectile {
 		Radius 2;
 		Height 4;
 		Scale 1;
-		Speed 80;
+		Speed 777;
 		DamageFunction (20);
 		MissileType "BulletTrail";
 		MissileHeight 8;

@@ -1,8 +1,10 @@
-Weapon Sprites:
-Chronoteeth
+creditz
 
-Smoke:
-Pillowblaster / Russian Overkill (no idea where he got it from)
+greetz to the secreta lounge crew - you guys rock
 
-Weapon Sounds:
+All Sprites (unless otherwise specified) - Chronoteeth
+Smoke sprites - Pillowblaster / Russian Overkill (no idea where he got it from)
+
+Sounds:
 Blaster fire - System Shock 2
+Spazershot fire / pump / secondary / etc. - MagmaCow
