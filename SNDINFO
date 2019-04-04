@@ -1,9 +1,5 @@
 // SNDINFO
 //
-$alias weapons/laserhit weapons/plasmax
-$volume weapons/laserhit 0.2
-//
-//
 misc/silent DSEMPTY
 misc/oof 	DSOOF
 misc/dry 	NOAMMO
@@ -16,6 +12,8 @@ weapons/laser1 LASER1
 weapons/laser2 LASER2
 weapons/laser3 LASER3
 weapons/laser4 LASER4
+$alias weapons/laserhit weapons/plasmax
+$volume weapons/laserhit 0.2
 //
 // Spazershot
 //
@@ -25,7 +23,6 @@ weapons/spazerp1 db-1
 weapons/spazerp2 db-2
 weapons/spazerp3 db-2
 $random weapons/spazersecondary {weapons/spazers1 weapons/spazers2 weapons/spazers3 weapons/spazers4}
-//$limit weapons/spazersecondary 0
 $volume weapons/spazersecondary 0.3
 weapons/spazers1 "sounds/spazer/genericshotgun-1.wav"
 weapons/spazers2 "sounds/spazer/genericshotgun-2.wav"
@@ -35,11 +32,20 @@ weapons/spazerleverfull "sounds/spazer/marlinlever.wav"
 $volume weapons/spazerleverfull 0.6
 weapons/spazerpumpbk "sounds/spazer/nagant-open.wav"
 weapons/spazerpumpfwd "sounds/spazer/db-open.wav"
-//weapons/spazersecondary "sounds/spazer/ded_shot_explode.wav"
-//weapons/spazerleveropn "sounds/spazer/nagant-up.wav"
-//weapons/spazerleversht "sounds/spazer/nagant-open.wav"
+//
+// Magnum
+//
+$random weapons/magnumprimary {weapons/magnump1 weapons/magnump3 weapons/magnump3}
+$random weapons/magnumprimaryv2 {weapons/magnump4 weapons/magnump5 weapons/magnump6}
+weapons/magnump1 "sounds/magnum/127-1.wav"
+weapons/magnump2 "sounds/magnum/127-2.wav"
+weapons/magnump3 "sounds/magnum/127-3.wav"
+weapons/magnump4 "sounds/magnum/SL8-1.wav"
+weapons/magnump5 "sounds/magnum/SL8-2.wav"
+weapons/magnump6 "sounds/magnum/SL8-3.wav"
+weapons/magnumzoomin "sounds/magnum/zoomin.wav"
+weapons/magnumzoomout "sounds/magnum/zoomout.wav"
 //
 //
 //
-
 // eof

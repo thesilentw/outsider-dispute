@@ -5,7 +5,7 @@ version "3.4"
 //
 #include "script/blaster.zsc"
 #include "script/spazershot.zsc"
-//#include "script/magnum.zsc"
+#include "script/magnum.zsc"
 //#include "script/halfnhalf.zsc"
 //#include "script/tominigun.zsc"
 //#include "script/ashthrower.zsc"
