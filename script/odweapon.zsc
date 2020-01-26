@@ -15,7 +15,7 @@ Class ODWeapon : DoomWeapon abstract {
 		Weapon.BobRangeY 1.0;
 		+WEAPON.NODEATHINPUT;
 		Decal "BulletChip";
-		Weapon.yadjust 6;
+		Weapon.yadjust 11;
 	}	
 	
     enum ComboWeaponConstants {

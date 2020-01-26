@@ -46,6 +46,22 @@ weapons/magnump6 "sounds/magnum/SL8-3.wav"
 weapons/magnumzoomin "sounds/magnum/zoomin.wav"
 weapons/magnumzoomout "sounds/magnum/zoomout.wav"
 //
+// ILS
+//
+$random weapons/ilsprimary {weapons/ilsp1 weapons/ilsp2 weapons/ilsp3}
+$volume weapons/ilsprimary 0.3
+weapons/ilsp1 "sounds/ils/127-1.wav"
+weapons/ilsp2 "sounds/ils/127-2.wav"
+weapons/ilsp3 "sounds/ils/127-3.wav"
+weapons/ilsopen1 "sounds/ils/glockslidepull.wav"
+weapons/ilsopen2 "sounds/ils/glockmagin.wav"
+$volume weapons/ilsopen2 0.15
+weapons/ilsclose "sounds/ils/m6out.wav"
+$volume weapons/ilsclose 0.2
+weapons/ilsload1 "sounds/ils/nagant-close.wav"
+weapons/ilsload2 "sounds/ils/shotgunpumpbackshort.wav"
+$volume weapons/ilsload1 0.3
+$volume weapons/ilsload2 0.3
 //
 //
 // eof

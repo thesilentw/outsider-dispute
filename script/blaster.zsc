@@ -3,7 +3,7 @@
 /// but don't pew too much or you'll be reduced to 
 /// pew			pew			pew
 ///
-Class ODBlaster : ODWeapon replaces Pistol {
+Class ODBlaster : ODWeapon replaces Fist {
 	float randOffset;
 	
 	default {
@@ -17,7 +17,6 @@ Class ODBlaster : ODWeapon replaces Pistol {
 		Weapon.BobRangeX 1.2;
 		Weapon.BobRangeY 0.7;
 		+WEAPON.NODEATHINPUT;
-		Weapon.yadjust 6;
 		+Weapon.Ammo_Optional;
 	}	
 	

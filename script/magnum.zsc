@@ -1,13 +1,13 @@
 /// magnum.zsc
 /// ka-click BOOM
 ///
-Class ODMagnum : ODWeapon replaces SuperShotgun { //it IS a power weapon, but hmmm.
+Class ODMagnum : ODWeapon replaces Pistol {
 	float randOffset;
 	bool scoped;
 
 	default {
 		inventory.pickupMessage "Oooh. Oh ho. Oh, yes. Yes. Yes!";
-		weapon.slotNumber 3;
+		weapon.slotNumber 2;
 		weapon.SelectionOrder 9000;
 		Weapon.AmmoUse 1;
 		Weapon.AmmoGive 10;
@@ -17,8 +17,6 @@ Class ODMagnum : ODWeapon replaces SuperShotgun { //it IS a power weapon, but hm
 		Weapon.BobRangeY 0.3;
 		+WEAPON.NODEATHINPUT;
 		Decal "BulletChip";
-		Weapon.yadjust 6;
-		//+Weapon.noautofire;
 	}	
 	
 	states {

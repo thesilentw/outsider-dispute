@@ -16,7 +16,6 @@ Class ODSpazershot : ODWeapon replaces Shotgun {
 		Weapon.BobRangeX 1.0;
 		Weapon.BobRangeY 0.5;
 		+WEAPON.NODEATHINPUT;
-		Weapon.yadjust 6;
 	}	
 	
 	states {
